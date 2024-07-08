@@ -23,6 +23,7 @@ https://www.joshwcomeau.com/css/custom-css-reset/
 }
 html, body {
 	overflow-x: hidden;
+  font-size: .8rem;
 }
 body {
   line-height: 1.5;
@@ -291,6 +292,9 @@ input, select{
   padding: 15px;
 }
 @media screen and (min-width: 1025px) {
+  html, body {
+    font-size: 1rem;
+  }
   h1 {
     font-size: 5rem;
     background-image: linear-gradient(180deg, #ffe082 12.50%, #212121 12.50%, #212121 50%, #ffe082 50%, #ffe082 62.50%, #212121 62.50%, #212121 100%);
