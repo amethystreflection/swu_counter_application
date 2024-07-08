@@ -1,8 +1,14 @@
-# React + Vite
+# SWUCounter
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This React app allows you to track your Star Wars: Unlimited games on any platform. At the moment, it offers the following features:
 
-Currently, two official plugins are available:
+* Player Names
+* Base Color and Type
+* A means of tracking HP
+* A way to keep track of Epic Actions on bases and leaders
+* Hp and Deploy reset
+* Easily start a new game
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+At the moment, this app only tracks two-player games, but I do plan on adding support for the four-player Twin Suns format in future versions. 
+
+May the Force be with you!
