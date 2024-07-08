@@ -167,7 +167,7 @@ const Init = () => {
   };
   return (
     <div className='overlay'>
-      <div className='init-box'>
+      <div className='init- center'>
         <h2>Let's randomly determine who gets the initiative for phase one.</h2>
         <button className='transition' onClick={handleFirstInit}>Determine Initiative</button>
       </div>
