@@ -272,7 +272,7 @@ input, select{
   position: absolute;
   left: 50%; 
   transform: translateX(-50%);
-  top: -10px;
+  top: 0;
   content: 'Has Initiative';
   display: block;
   margin-top: -1px;
