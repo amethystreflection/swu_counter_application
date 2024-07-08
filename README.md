@@ -1,4 +1,7 @@
-# SWUCounter
+# Welcome to the SWUCount App
+
+[Click here to use the app.
+](https://amethystreflection.github.io/swu_counter_application/)
 
 This React app allows you to track your Star Wars: Unlimited games on any platform. At the moment, it offers the following features:
 
