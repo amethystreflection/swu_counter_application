@@ -102,6 +102,7 @@ button, input, #p-color, #player-one h2, #player-two h2, .has-init::before {
   display: flex;
   flex-direction: column;
   align-content: center;
+  justify-content: center;
 }
 #board > div {
   align-content: center;
