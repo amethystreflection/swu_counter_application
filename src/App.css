@@ -1,0 +1,308 @@
+:root {
+  --bg-color: #212121;
+  --text-color: #b3e5fc;
+  --accent-color: #ffe082;
+  --error-color: #E57373;
+  --red-base: #972020;
+  --green-base: #1B5E20;
+  --blue-base: #1976D2;
+  --yellow-base: #e0ba2e;
+}
+/*
+Josh's Custom CSS Reset
+https://www.joshwcomeau.com/css/custom-css-reset/
+*/
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+#root, #__next {
+  isolation: isolate;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: "Roboto Slab", serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+}
+input, button, textarea, select, .select-items {
+  font: inherit;
+  background-color: transparent;
+  border-radius: 5px;
+  color: var(--text-color);
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+.transition {
+  transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+}
+.inline {
+  display: inline;
+}
+.rel {
+  position: relative;
+}
+.container {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  text-align: center;
+}
+.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+}
+button {
+  padding: 5px;
+  background-color: var(--bg-color);
+  cursor: pointer;
+  transition: all .5s linear;
+  -webkit-transition: all .5s linear;
+  -moz-transition: all .5s linear;
+  -ms-transition: all .5s linear;
+  -o-transition: all .5s linear;
+}
+button:hover:not(:disabled) {
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  border-color: var(--bg-color);
+}
+button:disabled {
+  border: 1px solid var(--text-color);
+  cursor: default;
+  text-decoration: line-through;
+}
+button, input, #p-color, #player-one h2, #player-two h2, .has-init::before {
+  border: 1px solid var(--accent-color);
+}
+#board button {
+  margin: 15px 5px;
+}
+header {
+  position: relative;
+  z-index: 2;
+}
+.scan-line {
+  position: absolute;
+  z-index: 3;
+  width: 100%;
+  height: 2px;
+  background-color: var(--bg-color);
+  top: 0;
+  left: 0;
+  -webkit-animation: moveLine 1s infinite;
+  animation: moveLine 1s infinite;
+  opacity: 0.3;
+  display: none;
+  -webkit-animation-play-state: paused;
+  animation-play-state: paused; 
+}
+.glitched .scan-line {
+  display: block !important;
+  -webkit-animation-play-state: running !important;
+  animation-play-state: running !important; 
+}
+@keyframes moveLine {
+  from {top: 0;}
+  to {top: 100%;}
+}
+@-webkit-keyframes moveLine {
+  from {top: 0;}
+  to {top: 100%;}
+}
+h1 {
+  cursor: pointer;
+  margin: 0;
+  position: relative;
+  font-size: 3rem;
+  background-image: linear-gradient(180deg, #ffe082 25%, #212121 25%, #212121 50%, #ffe082 50%, #ffe082 75%, #212121 75%, #212121 100%);
+  background-size: 4.00px 4.00px;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  -webkit-text-stroke: 1px var(--accent-color);
+}
+h1, h2 {
+  font-family: "Orbitron", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 600;
+  font-style: normal;
+  color: var(--accent-color);
+}
+label {
+  margin-right: 5px;
+}
+input[type=checkbox] {
+  accent-color: var(--text-color);
+  cursor: pointer;
+}
+input, select{
+  margin: 0 0 15px 0;
+}
+#p-rare {
+  background-color: var(--bg-color);
+}
+#p-color {
+  position: relative;
+  background-color: var(--bg-color);
+  color: var(--background-color);
+}
+#p-color select {
+  display: none;
+}
+#p-color select, #p-color option {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+[aria-invalid='true'] {
+  border: 2px solid var(--error-color);
+}
+.error-msg {
+  display: none;
+}
+[aria-invalid='true'] ~ .error-msg {
+  color: var(--error-color);
+  margin: -14px 0 0 0;
+  display: block;
+}
+.explanation {
+  font-size: 1rem;
+}
+#player-one h2:first-child, 
+#player-two h2:first-child,
+.defeat {
+  width: fit-content;
+  margin: 0 auto;
+}
+.defeat {
+  margin-top: 15px;
+}
+#player-one h2, 
+#player-two h2 {
+  padding: 5px;
+  border-radius: 5px;
+  background-color: var(--bg-color);
+}
+#player-one h2.inline, 
+#player-two h2.inline {
+  cursor: pointer;
+  vertical-align: middle;
+}
+.red,
+.green,
+.yellow,
+.blue {
+  position: relative;
+  background-size: 8.00px 8.00px;
+  border-radius: 5px;
+  width: 100%;
+  margin: auto;
+  padding: 15px 0;
+}
+.red {
+  background-image: linear-gradient(180deg, var(--red-base) 25%, var(--bg-color) 25%, var(--bg-color) 50%, var(--red-base) 50%, var(--red-base) 75%, var(--bg-color) 75%, var(--bg-color) 100%);
+}
+.green  {
+  background-image: linear-gradient(180deg, var(--green-base) 25%, var(--bg-color) 25%, var(--bg-color) 50%, var(--green-base) 50%, var(--green-base) 75%, var(--bg-color) 75%, var(--bg-color) 100%);
+}
+.blue {
+  background-image: linear-gradient(180deg, var(--blue-base) 25%, var(--bg-color) 25%, var(--bg-color) 50%, var(--blue-base) 50%, var(--blue-base) 75%, var(--bg-color) 75%, var(--bg-color) 100%);
+}
+.yellow {
+  background-image: linear-gradient(180deg, var(--yellow-base) 25%, var(--bg-color) 25%, var(--bg-color) 50%, var(--yellow-base) 50%, var(--yellow-base) 75%, var(--bg-color) 75%, var(--bg-color) 100%);
+}
+.add-sub {
+  height: 35px;
+  width: 35px;
+  border-radius: 50%;
+  vertical-align: middle;
+  font-weight: 800;
+}
+#responsive-stretch {
+  width: 90%;
+}
+.player-info, .has-init{
+  border-top: 1px solid var(--accent-color);
+  border-bottom: 1px solid var(--accent-color);
+}
+.player-info {
+  position: relative;
+  padding: 15px;
+  margin: 15px 0 0 0;
+}
+.player-info button, h2 {
+  margin: 15px 0;
+}
+.has-init {
+  position: relative;
+}
+.has-init::before {
+  font-size: .8rem;
+  position: absolute;
+  left: 50%; 
+  transform: translateX(-50%);
+  top: -10px;
+  content: 'Has Initiative';
+  display: block;
+  margin-top: -1px;
+  width: 30%;
+  text-align: center;
+  background-color: var(--bg-color);
+}
+.has-init > .init-btn {
+  display: none;
+}
+.overlay {
+  z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(33, 33, 33, 0.9);
+}
+.init-box {
+  z-index: 3;
+  position: absolute;
+  bottom: 50%;
+  width: 100%;
+  background-color: var(--bg-color);
+  padding: 15px;
+}
+@media screen and (min-width: 1025px) {
+  h1 {
+    font-size: 5rem;
+    background-image: linear-gradient(180deg, #ffe082 12.50%, #212121 12.50%, #212121 50%, #ffe082 50%, #ffe082 62.50%, #212121 62.50%, #212121 100%);
+    background-size: 8.00px 8.00px;
+  }
+  .explanation {
+    font-size: 1.5rem;
+  }
+  #board {         
+   -webkit-flex-flow: column nowrap; 
+    flex-flow: column nowrap;
+  }
+} 
+@media screen and (min-width: 768px) {
+  .has-init::before {
+    width: 15%;
+  }
+}
