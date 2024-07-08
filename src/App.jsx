@@ -103,6 +103,7 @@ const AddPlayerForm = ({setPlayeData, setSecondPlayerData, setGameStarted}) => {
     } else {
       nameInput.setAttribute('aria-invalid', 'true');
     }
+    return false;
   };
   return (
     <>
