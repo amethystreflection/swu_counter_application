@@ -102,20 +102,24 @@ button, input, #p-color, #player-one h2, #player-two h2, .has-init::before {
   display: flex;
   flex-direction: column;
   align-content: center;
+  height: 100vh
 }
-#board > div {
-  align-content: center;
-  margin: auto;
-}
-#board > div:first-child,
-#board > div:nth-child(3) {
-  height: 45vh
+#board > div:first-child {
+  height: 45vh;
 }
 #board > div:nth-child(2) {
   height: 10vh;
 }
+#board > div:last-child {
+  height: 45vh;
+}
+#board > div {
+  align-content: center;
+  margin: auto;
+  padding: 8px 0;
+}
 #board button {
-  margin: 8px 5px;
+  margin: 8px 5px 0;
 }
 header {
   position: relative;
@@ -212,7 +216,7 @@ input, select{
 #player-two h2:first-child,
 .defeat {
   width: fit-content;
-  margin: 0 auto;
+  margin: 15px auto 8px;
 }
 .defeat {
   margin-top: 15px;
@@ -307,9 +311,6 @@ input, select{
   padding: 15px;
 }
 @media screen and (min-width: 1025px) {
-  #responsive-stretch {
-    width: 90%;
-  }
   h1 {
     font-size: 5rem;
     background-image: linear-gradient(180deg, #ffe082 12.50%, #212121 12.50%, #212121 50%, #ffe082 50%, #ffe082 62.50%, #212121 62.50%, #212121 100%);
