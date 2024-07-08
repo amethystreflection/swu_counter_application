@@ -98,6 +98,16 @@ button:disabled {
 button, input, #p-color, #player-one h2, #player-two h2, .has-init::before {
   border: 1px solid var(--accent-color);
 }
+#board > div {
+  align-content: center;
+}
+#board > div:first-child,
+#board > div:nth-last-child(3) {
+  height: 45vh
+}
+#board > div:nth-child(2) {
+  height: 10vh;
+}
 #board button {
   margin: 15px 5px;
 }
