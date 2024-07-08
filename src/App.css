@@ -226,9 +226,6 @@ input, select{
   vertical-align: middle;
   font-weight: 800;
 }
-#responsive-stretch {
-  width: 90%;
-}
 .player-info, .has-init{
   border-top: 1px solid var(--accent-color);
   border-bottom: 1px solid var(--accent-color);
@@ -292,6 +289,9 @@ input, select{
     -moz-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
+  }
+  #responsive-stretch {
+    width: 90%;
   }
   h1 {
     font-size: 5rem;
