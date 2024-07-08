@@ -102,16 +102,8 @@ button, input, #p-color, #player-one h2, #player-two h2, .has-init::before {
   display: flex;
   flex-direction: column;
   align-content: center;
+  align-items: center;
   height: 100vh;
-}
-#board > div:first-child {
-  height: 45vh;
-}
-#board > div:nth-child(2) {
-  height: 10vh;
-}
-#board > div:last-child {
-  height: 45vh;
 }
 #board > div {
   align-content: center;
