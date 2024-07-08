@@ -22,8 +22,10 @@ https://www.joshwcomeau.com/css/custom-css-reset/
   isolation: isolate;
 }
 html, body {
-	overflow-x: hidden;
   font-size: 1rem;
+}
+.container {
+  text-align: center;
 }
 body {
   line-height: 1.5;
@@ -280,7 +282,6 @@ input, select{
     position: relative;
     width: 100%;
     height: 100vh;
-    text-align: center;
   }
   .center {
     position: absolute;
