@@ -102,7 +102,7 @@ button, input, #p-color, #player-one h2, #player-two h2, .has-init::before {
   align-content: center;
 }
 #board > div:first-child,
-#board > div:nth-last-child(3) {
+#board > div:nth-child(3) {
   height: 45vh
 }
 #board > div:nth-child(2) {
