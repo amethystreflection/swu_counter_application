@@ -66,6 +66,9 @@ p, h1, h2, h3, h4, h5, h6 {
   -ms-transition: all .5s linear;
   -o-transition: all .5s linear;
 }
+#responsive-stretch {
+  width: 100%;
+}
 .inline {
   display: inline;
 }
