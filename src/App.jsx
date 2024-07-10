@@ -15,9 +15,9 @@ const App = () => {
         {gameStarted &&
          <Init/>
         }
-        <div className='center' id='responsive-stretch'>
+        <>
           {gameStarted === false ?
-            <>
+            <div className='center'>
               <header onClick={useGlitch}>
                 <h1>Welcome to SWUcount</h1>
               </header>
@@ -27,47 +27,51 @@ const App = () => {
                 setPlayeData={setPlayerData}
                 setSecondPlayerData={setSecondPlayerData}
                 setGameStarted={setGameStarted}/>
-            </>
+            </div>
             :
             <>
               <div id="board">
                 <div className={playerData.color} id='player-one'>
-                  <h2>{playerData.player}</h2>
-                  <HitPoints
-                    playerNo={1}
-                    playerData={playerData}
-                    secondPlayerData={secondPlayerData}
-                  />
-                  <TakeInitiative/>
-                 <div>
-                    <button className='inline deploy transition' onClick={handleDeploy}>Deploy Leader</button>
-                    {playerData.hp === 25 &&
-                        <button className='inline deploy transition' onClick={handleDeploy}>Use Base's Epic Action</button>
-                    }
+                  <div>
+                    <h2>{playerData.player}</h2>
+                    <HitPoints
+                      playerNo={1}
+                      playerData={playerData}
+                      secondPlayerData={secondPlayerData}
+                    />
+                    <TakeInitiative/>
+                    <div>
+                      <button className='inline deploy transition' onClick={handleDeploy}>Deploy Leader</button>
+                        {playerData.hp === 25 &&
+                          <button className='inline deploy transition' onClick={handleDeploy}>Use Base's Epic Action</button>
+                        }
+                      </div>
+                    </div>
                   </div>
-                </div>
                 <div>
                   <Reset/>
                 </div>
                 <div className={secondPlayerData.color} id='player-two'>
-                  <h2>{secondPlayerData.player}</h2>
-                  <HitPoints
-                    playerNo={2}
-                    playerData={playerData}
-                    secondPlayerData={secondPlayerData}
-                  />
-                  <TakeInitiative/>
                   <div>
-                    <button className='inline deploy transition' onClick={handleDeploy}>Deploy Leader</button>
-                    {secondPlayerData.hp === 25 &&
-                        <button className='inline deploy transition' onClick={handleDeploy}>Use Base's Epic Action</button>
-                    }
+                    <h2>{secondPlayerData.player}</h2>
+                    <HitPoints
+                      playerNo={2}
+                      playerData={playerData}
+                      secondPlayerData={secondPlayerData}
+                    />
+                    <TakeInitiative/>
+                    <div>
+                      <button className='inline deploy transition' onClick={handleDeploy}>Deploy Leader</button>
+                        {secondPlayerData.hp === 25 &&
+                          <button className='inline deploy transition' onClick={handleDeploy}>Use Base's Epic Action</button>
+                        }
+                    </div>
                   </div>
                 </div>
               </div>
             </>
           }
-        </div>
+        </>
     </div>
   )
 };
@@ -166,8 +170,8 @@ const Init = () => {
     document.querySelector('.overlay').style.display = 'none';
   };
   return (
-    <div className='overlay'>
-      <div className='init- center'>
+    <div className='overlay center'>
+      <div>
         <h2>Let's randomly determine who gets the initiative for phase one.</h2>
         <button className='transition' onClick={handleFirstInit}>Determine Initiative</button>
       </div>
