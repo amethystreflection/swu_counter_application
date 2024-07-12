@@ -17,7 +17,7 @@ const App = () => {
         }
         <>
           {gameStarted === false ?
-            <div className='center'>
+            <div className='center-desktop'>
               <header onClick={useGlitch}>
                 <h1>Welcome to SWUcount</h1>
               </header>

@@ -304,12 +304,20 @@ input, select{
   .has-init::before {
     width: 15%;
   }
+  .center-desktop {
+    height: 100%;
+    display: grid;
+    justify-content: center;
+    align-content: center;
+  }
 }
 @media screen and (max-width: 1024px) {
+  .center-desktop {
+    padding: 15% 0; 
+  }
   #board {
     flex-flow: column-reverse;
-    justify-content: center;
-    overflow-y: hidden;
+    justify-content: center; 
   }
   #player-one, 
   #player-two {
@@ -317,7 +325,10 @@ input, select{
     height: 35%;
   }
   #board > div:nth-child(2) {
-    height: 10%;
+    height: 6%;
+  }
+  #board > div:nth-child(2) > div { 
+    margin-bottom: 8px;
   }
   #board > div:nth-child(3) {
     transform: scale(-1, -1);
