@@ -313,10 +313,10 @@ input, select{
   #player-one, 
   #player-two {
     margin: 0;
-    height: 47%;
+    height: 45%;
   }
   #board > div:nth-child(2) {
-    height: 6%;
+    height: 10%;
   }
   #board > div:nth-child(2) > div { 
     margin-bottom: 8px;
