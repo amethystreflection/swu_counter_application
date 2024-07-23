@@ -184,7 +184,7 @@ const TakeInitiative = () => {
   const takeInit = (e) => {
     let currentInit = document.querySelector('.has-init');
     currentInit.classList.remove('has-init');
-    let targ = e.target.parentElement;
+    let targ = e.target.parentElement.parentElement;
     targ.classList.add('has-init');
   };
   return (
